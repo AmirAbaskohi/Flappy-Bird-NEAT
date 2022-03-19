@@ -2,24 +2,15 @@ from const import *
 from utils import blitRotateCenter
 
 class Bird:
-    """
-    Bird class representing the flappy bird
-    """
     MAX_ROTATION = 25
-    IMGS = bird_images
+    IMGS = BIRD_IMGS
     ROT_VEL = 20
     ANIMATION_TIME = 5
 
     def __init__(self, x, y):
-        """
-        Initialize the object
-        :param x: starting x pos (int)
-        :param y: starting y pos (int)
-        :return: None
-        """
         self.x = x
         self.y = y
-        self.tilt = 0  # degrees to tilt
+        self.tilt = 0
         self.tick_count = 0
         self.vel = 0
         self.height = self.y
@@ -27,10 +18,6 @@ class Bird:
         self.img = self.IMGS[0]
 
     def jump(self):
-        """
-        make the bird jump
-        :return: None
-        """
         self.vel = -10.5
         self.tick_count = 0
         self.height = self.y
@@ -43,7 +30,7 @@ class Bird:
         if displacement < 0:
             displacement -= 2
         self.y = self.y + displacement
-        if displacement < 0 or self.y < self.height + 50:  # tilt up
+        if displacement < 0 or self.y < self.height + 50:
             if self.tilt < self.MAX_ROTATION:
                 self.tilt = self.MAX_ROTATION
         else:

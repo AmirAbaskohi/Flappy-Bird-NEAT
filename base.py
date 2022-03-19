@@ -2,8 +2,8 @@ from const import *
 
 class Base:
     VEL = 5
-    WIDTH = base_img.get_width()
-    IMG = base_img
+    WIDTH = BASE_IMG.get_width()
+    IMG = BASE_IMG
 
     def __init__(self, y):
         self.y = y
