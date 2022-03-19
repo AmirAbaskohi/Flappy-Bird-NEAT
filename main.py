@@ -41,11 +41,11 @@ if __name__ == '__main__':
         for r in rem:
             pipes.remove(r)
 
-        if bord.y + bird.img.get_height() >= 730:
+        if bird.y + bird.img.get_height() >= 730:
             pass
 
         base.move()
-        draw_window(win, bird, pipes, base)
+        draw_window(win, bird, pipes, base, score)
     
     pygame.quit()
     quit()
