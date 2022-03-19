@@ -20,6 +20,10 @@ if __name__ == '__main__':
             if event.type == pygame.QUIT:
                 run = False
         
+        for pipe in pipes:
+            pipe.move()
+
+        base.move()
         draw_window(win, bird, pipes, base)
     
     pygame.quit()
