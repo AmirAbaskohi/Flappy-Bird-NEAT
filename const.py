@@ -1,7 +1,7 @@
 import pygame
 import os
 
-WIDTH = 600
+WIDTH = 500
 HEIGHT = 800
 
 BIRD_IMGS = [
